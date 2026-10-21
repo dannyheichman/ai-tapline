@@ -1,0 +1,27 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+output-metadata.json
+*.hprof
+.kotlin/
+*.log
+local.properties
+.navigation/
+*.keystore
+*.jks
+google-services.json
+agconnect-services.json
+# Calibration dumps contain chat text. Never commit them.
+*-tree-*.txt
+copilot-tree-*.txt
