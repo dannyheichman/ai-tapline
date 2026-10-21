@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "notes": "Selectors are data. Edit them from Calibrate on the phone after reading a node-tree dump. The default target is the enterprise Microsoft 365 Copilot app, package com.microsoft.office.officehubrow (Play Store listing is now branded Microsoft Copilot, 'the AI built for work'; the application id did not change). The separate consumer Copilot app is com.microsoft.copilot. Confirm the foreground package on the Calibrate screen before a session. This file never contains credentials.",
+  "targetPackage": "com.microsoft.office.officehubrow",
+  "knownPackages": [
+    {
+      "packageName": "com.microsoft.office.officehubrow",
+      "label": "Microsoft 365 Copilot (work or school)",
+      "notes": "Formerly the Microsoft 365 / Office app. Play Store title is Microsoft Copilot. Work and school accounts sign in here. Verify with adb shell pm path com.microsoft.office.officehubrow."
+    },
+    {
+      "packageName": "com.microsoft.copilot",
+      "label": "Microsoft Copilot (consumer)",
+      "notes": "The separate consumer Copilot app. It also has a text chat with a model picker. Switch the target package to this only if that is the app on screen."
+    }
+  ],
+  "openTimeoutMs": 8000,
+  "pollIntervalMs": 350,
+  "responseTimeoutMs": 120000,
+  "completion": {
+    "stableForMs": 1500,
+    "mode": "BOTH"
+  },
+  "stopPhrases": [
+    "stop session",
+    "end session",
+    "stop voice",
+    "cancel session"
+  ],
+  "messageTextExcludes": [
+    "AI-generated content may be incorrect",
+    "AI-generated content",
+    "Copilot is AI and can make mistakes"
+  ],
+  "messagePick": {
+    "shortTailMaxChars": 80,
+    "shortTailRatio": 0.35
+  },
+  "sendFallbackIme": true,
+  "selectors": {
+    "chatInput": {
+      "pick": "BOTTOM_MOST",
+      "anyOf": [
+        {
+          "editable": true,
+          "password": false,
+          "classNameContains": ["EditText"]
+        },
+        {
+          "editable": true,
+          "password": false,
+          "hintContains": ["message", "ask", "prompt", "type", "copilot"]
+        },
+        {
+          "editable": true,
+          "password": false,
+          "contentDescriptionContains": ["message", "ask", "prompt", "type", "chat"]
+        },
+        {
+          "editable": true,
+          "password": false,
+          "resourceIdContains": ["input", "prompt", "composer", "message", "edit", "ask"]
+        },
+        {
+          "editable": true,
+          "password": false
+        }
+      ]
+    },
+    "sendButton": {
+      "pick": "BOTTOM_MOST",
+      "anyOf": [
+        {
+          "clickable": true,
+          "contentDescriptionContains": ["send"],
+          "contentDescriptionNotContains": ["voice", "mic", "microphone", "speak", "dictation", "audio"]
+        },
+        {
+          "clickable": true,
+          "textEquals": ["Send"],
+          "textNotContains": ["voice", "mic"]
+        },
+        {
+          "clickable": true,
+          "resourceIdContains": ["send", "submit"],
+          "resourceIdNotContains": ["voice", "mic", "audio", "dictation"]
+        }
+      ]
+    },
+    "generatingIndicator": {
+      "pick": "BOTTOM_MOST",
+      "anyOf": [
+        {
+          "clickable": true,
+          "contentDescriptionEquals": ["Stop generating", "Stop responding", "Cancel response", "Stop generation"]
+        },
+        {
+          "clickable": true,
+          "textEquals": ["Stop generating", "Stop responding", "Cancel response"]
+        },
+        {
+          "clickable": true,
+          "contentDescriptionEquals": ["Stop"],
+          "classNameContains": ["Button", "ImageButton", "ImageView"]
+        },
+        {
+          "resourceIdContains": ["stop_generating", "stopGenerating", "stop_button", "stopResponding"]
+        }
+      ]
+    },
+    "assistantMessage": {
+      "pick": "BOTTOM_MOST",
+      "anyOf": [
+        {
+          "editable": false,
+          "password": false,
+          "classNameContains": ["TextView"],
+          "minTextLength": 1
+        },
+        {
+          "editable": false,
+          "password": false,
+          "minTextLength": 20
+        }
+      ]
+    }
+  }
+}
