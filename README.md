@@ -28,9 +28,15 @@ Or open **Calibrate**, put Copilot in front, and tap **Refresh node tree**. The 
 
 ## Install (sideload)
 
-The debug APK is produced by `./gradlew :app:assembleDebug` and by the GitHub Actions workflow `.github/workflows/debug-apk.yml` (artifact `copilot-voice-bridge-debug`).
+Download the debug APK directly on the phone:
 
-On the phone, allow installs from your file manager or use adb:
+https://github.com/dannyheichman/ai-tapline/releases/download/v0.1.0-debug/copilot-voice-bridge-debug.apk
+
+That file is the `v0.1.0-debug` prerelease. A push to `cursor/copilot-voice-bridge-d984` or `main` rebuilds it and replaces the same URL. Open the link in the phone browser and allow the install.
+
+The same APK is also produced by `./gradlew :app:assembleDebug` and attached to the GitHub Actions run as the artifact `copilot-voice-bridge-debug`.
+
+On a computer, install with adb:
 
 ```bash
 adb install -r copilot-voice-bridge-debug.apk
