@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Copilot Voice Bridge</string>
+    <string name="tile_label">Copilot Voice</string>
+    <string name="notification_channel">Hands-free session</string>
+    <string name="notification_channel_description">Shows while a hands-free Copilot session is listening, waiting, or speaking.</string>
+</resources>

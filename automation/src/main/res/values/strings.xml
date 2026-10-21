@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_service_label">Copilot Voice Bridge</string>
+    <string name="accessibility_service_description">Reads the on-screen Microsoft 365 Copilot chat so a hands-free session can type what you say into the text box, press send, and read the reply aloud with the Android text-to-speech engine. It does not call Microsoft cloud APIs. Turn this on only if you want Copilot Voice Bridge to drive the Copilot app. Chat text passes through this service on your device.</string>
+</resources>

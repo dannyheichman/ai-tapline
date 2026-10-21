@@ -1,0 +1,29 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+*.aab
+output-metadata.json
+*.hprof
+.kotlin/
+
+# Signing material and machine-specific SDK paths. This repo is public.
+*.jks
+*.keystore
+!debug.keystore
+google-services.json
+secrets.properties
+.env
+.env.*
+
+# Calibration dumps contain whatever was on the Copilot screen.
+dumps/
+*.a11y.txt
