@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_service_summary">Types into the Microsoft Copilot text chat and reads the reply aloud.</string>
+    <string name="accessibility_service_description">Hands-free Copilot watches the Microsoft Copilot window you already have open, inserts the words you dictate into the text chat, presses Send, and copies the finished reply so this phone can speak it. It does not read other apps. Copilot\'s own voice mode ignores the model you picked; this service keeps that text chat, including the model selected there. The service cannot see Copilot when a work profile or an Intune app-protection policy hides the window.</string>
+</resources>

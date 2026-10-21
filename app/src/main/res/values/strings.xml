@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hands-free Copilot</string>
+    <string name="tile_label">Copilot voice</string>
+    <string name="notification_channel_name">Voice session</string>
+    <string name="notification_channel_description">Start, interrupt, or stop a hands-free Copilot session.</string>
+</resources>

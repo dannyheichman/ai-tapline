@@ -1,0 +1,112 @@
+{
+  "targetPackage": "com.microsoft.office.officehubrow",
+  "alternatePackages": [
+    "com.microsoft.copilot"
+  ],
+  "launchActivity": "",
+  "input": {
+    "resourceIds": [],
+    "resourceIdSuffixes": [],
+    "contentDescriptions": [
+      "Ask me anything",
+      "Message Copilot",
+      "Type a message",
+      "Ask Copilot",
+      "Ask a question"
+    ],
+    "contentDescriptionContains": [
+      "message copilot",
+      "ask me anything",
+      "type a message"
+    ],
+    "texts": [],
+    "textContains": [],
+    "classNames": [
+      "android.widget.EditText"
+    ]
+  },
+  "send": {
+    "resourceIds": [],
+    "resourceIdSuffixes": [],
+    "contentDescriptions": [
+      "Send",
+      "Send message",
+      "Submit"
+    ],
+    "contentDescriptionContains": [
+      "send"
+    ],
+    "texts": [
+      "Send"
+    ],
+    "textContains": [],
+    "classNames": []
+  },
+  "stopGenerating": {
+    "resourceIds": [],
+    "resourceIdSuffixes": [],
+    "contentDescriptions": [
+      "Stop generating",
+      "Stop response",
+      "Cancel response"
+    ],
+    "contentDescriptionContains": [
+      "stop generating",
+      "stop response"
+    ],
+    "texts": [
+      "Stop generating",
+      "Stop"
+    ],
+    "textContains": [],
+    "classNames": []
+  },
+  "generating": {
+    "resourceIds": [],
+    "resourceIdSuffixes": [],
+    "contentDescriptions": [],
+    "contentDescriptionContains": [
+      "generating",
+      "thinking"
+    ],
+    "texts": [
+      "Generating",
+      "Copilot is thinking"
+    ],
+    "textContains": [
+      "Copilot is thinking"
+    ],
+    "classNames": []
+  },
+  "assistantMessage": {
+    "resourceIds": [],
+    "resourceIdSuffixes": [],
+    "contentDescriptions": [],
+    "contentDescriptionContains": [],
+    "texts": [],
+    "textContains": [],
+    "classNames": []
+  },
+  "messageList": {
+    "resourceIds": [],
+    "resourceIdSuffixes": [],
+    "contentDescriptions": [],
+    "contentDescriptionContains": [],
+    "texts": [],
+    "textContains": [],
+    "classNames": []
+  },
+  "settleMillis": 1500,
+  "indicatorClearedSettleMillis": 800,
+  "indicatorStuckMillis": 4500,
+  "responseTimeoutMillis": 120000,
+  "pollMillis": 350,
+  "minAssistantChars": 1,
+  "newestMessageEdge": "bottom",
+  "stopPhrases": [
+    "stop session",
+    "end session",
+    "end voice session"
+  ],
+  "notes": "targetPackage com.microsoft.office.officehubrow is the Microsoft 365 / work Copilot app. On Google Play the listing is currently named Microsoft Copilot and the package id was not changed when Microsoft 365 was renamed. alternatePackages records the consumer Copilot app com.microsoft.copilot for reference only; the driver does not switch to it. Paste a resource id or content description from a calibration dump into the matching selector. Leave assistantMessage empty to use the newest-text heuristic. Set newestMessageEdge to top if the transcript list is reversed. Set launchActivity to a fully qualified activity class if the launcher activity is not the chat."
+}
